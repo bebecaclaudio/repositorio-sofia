@@ -1,0 +1,1 @@
+Estou Aprendendo Desenvolvimento de Web e Programação com Javascript, esse é meu primeiro documento do Git!
