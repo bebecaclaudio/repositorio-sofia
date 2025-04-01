@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css/style.css">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Boas vindas!</h1>
+        <p>Vamos personalizar a sua saudação com Javascript!</p>
+        <!-- A Div abaixo faz uma interação com o Javascript, a Class="saudacao" existe para alterar o estilo
+         no CSS e o ID atribuido (ou seja um atributo) serve para interagir com o javascript, que vai interagir
+         com o usuário visitante. -->
+        <div class="saudacao" id="mensagemSaudacao">Olá, visitante!</div>
+        <!-- O botão abaixo serve para trazer a interação com o usuário, o que traz essa interação
+         com o usuário é o Javascript executado a partir do atributo (onClick="nomedoAtributoaqui ()")
+         colocamos os parenteses vazios para ele interagir com o componente que pedimos para ele interagir
+         no código do Javascript -->
+        <button onclick="mudarNome()">Personalizar saudação</button>
+    </div>
+    <script>
+        /* A função traz o que esta dentro dela a interação com o elemento do HTML no qual foi atribuido
+        com os elementos nos campos do HTML e trouxemos os elementos das Variaveis, no qual atribuimos
+        o campo nome [let nome = " "] <-- é a variavel, usamos let ao invés de var */
+        function mudarNome (){
+            //Abaixo temos uma variavel de name (nome) = (recebe o conteúdo que está dentro das "...")
+            let nome = "Sofia"
+            /*o código abaixo concatena o Javascript com o código do HTML pois ele puxa, "chama o documento" 
+            com o elemento document. ... getElementById (chama o o elemento que tem o atribruto da id (identidade)
+            que foi atribuido no campo do HTML), isso colocamos entre parenteses e aspas, após isso colocamos 
+            .textContent para interagir com o conteúdo do texto no qual atribuimos a alteração = (recebe) o conteúdo
+            que esta dentro das aspas que é uma string "Olá, " e concatenamos com o sinal de mais (+) para chamar
+            o elemento recebido no atributo da variavel nome, após isso colocamos outra string dentro das aspas,
+            tudo isso dentro da tag "script" (que é onde contém o código Javascript que vai interagir com o conteúdo
+            HTML) */
+            document.getElementById("mensagemSaudacao").textContent = "Olá, " + nome + "!"
+        }
+    </script>
+</body>
+</html>
